@@ -16,7 +16,7 @@ pipeline
       {
           steps {
            powershell '''
-				if ( $check_condition ) {
+				if ($check_condition) {
 				  Write-Host "No String Replace"
 				}
 				else {
