@@ -11,7 +11,6 @@ pipeline
     disableConcurrentBuilds()
 	timestamps()
     }
-  //agent { label 'hsdp_ci_ciforci' }
   stages {
       stage ('Deploy')
       {
