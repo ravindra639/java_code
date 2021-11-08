@@ -17,13 +17,12 @@ pipeline
       {
           steps {
            powershell '''
-				Write-Host "CONDITION: $check_condition"
 				if ( $check_condition ) {
 				  Write-Host "No String Replace"
 				}
 				else {
 				Write-Host "Replace String"
-				(Get-Content '$WORKSPACE\\space folder\\main.py') -replace 'sfdcSandbox = True', 'sfdcSandbox = False' | Out-File -encoding ASCII '$WORKSPACE\\space folder\\main.py'
+				(Get-Content '$WORKSPACE\\spacefolder\\main.py') -replace 'sfdcSandbox = True', 'sfdcSandbox = False' | Out-File -encoding ASCII '$WORKSPACE\\spacefolder\\main.py'
 				}
               '''
           }
