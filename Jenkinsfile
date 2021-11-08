@@ -15,8 +15,8 @@ pipeline
       stage ('Deploy')
       {
           steps {
-           powershell '''
-				if ($check_condition -eq 'true') {
+           powershell ''' 	Write-Host "CONDITION: ${env:check_condition}"
+				if (${env:check_condition} -eq 'true') {
 				  Write-Host "No String Replace"
 				  Write-Host "CONDITION: ${env:check_condition}"
 				}
