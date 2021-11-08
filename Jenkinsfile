@@ -3,6 +3,7 @@ pipeline
     parameters {
 		booleanParam(defaultValue: false, description: 'To check the Production or Non-Production', name: 'check_condition')
     }
+	agent any
 	environment {
         EMAIL_RECIPIENTS   = "${TA_MAIL}"
     }
