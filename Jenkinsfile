@@ -18,7 +18,7 @@ pipeline
            powershell '''
 				if ($check_condition -eq 'true') {
 				  Write-Host "No String Replace"
-				  Write-Host "CONDITION: $$check_condition"
+				  Write-Host "CONDITION: ${env:check_condition}"
 				}
 				else {
 				Write-Host "Replace String"
