@@ -21,7 +21,7 @@ pipeline
 				}
 				else {
 				Write-Host "Replace String"
-				(Get-Content '$WORKSPACE\\spacefolder\\main.py') -replace 'sfdcSandbox = True', 'sfdcSandbox = False' | Out-File -encoding ASCII '$WORKSPACE\\spacefolder\\main.py'
+				(Get-Content '$(env:WORKSPACE)\spacefolder\main.py') -replace 'sfdcSandbox = True', 'sfdcSandbox = False' | Out-File -encoding ASCII '$(env:WORKSPACE}\spacefolder\main.py'
 				}
               '''
           }
