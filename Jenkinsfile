@@ -19,7 +19,7 @@ pipeline
            bat '''
 				@echo off
 				echo %check_condition%
-				if %check_condition%==false
+				if "%check_condition%" == "false"
 				powerhsell (Get-Content '$WORKSPACE\\space folder\\main.py') -replace 'sfdcSandbox = True', 'sfdcSandbox = False' | Out-File -encoding ASCII '$WORKSPACE\\space folder\\main.py'
 				else
 				echo "No string Replace is required"
