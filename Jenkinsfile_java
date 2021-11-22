@@ -20,5 +20,19 @@ pipeline {
 				'''
             }
         }
+		stage('Tomcat Deploy') { 
+            steps {
+                bat '''
+				echo Tomcat Stage
+				'''
+            }
+        }
+		stage('Deploy Artifactory') { 
+            steps {
+                bat '''
+				echo Artifactory Stage
+				'''
+            }
+        }
     }
 }
