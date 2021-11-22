@@ -2,7 +2,7 @@ pipeline {
 	parameters {
 			text(name: 'REPO', defaultValue: 'welcome', description: '')
 			string(name: 'BUILD', defaultValue: '', description: '')
-			boolean(name: 'FAILED', defaultValue: 'true', description: '')
+			boolean(name: 'FAILED', defaultValue: 'True', description: '')
 		}
     agent any 
     stages {
