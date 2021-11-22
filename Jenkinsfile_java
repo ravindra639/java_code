@@ -1,0 +1,21 @@
+pipeline {
+	parameters {
+			text(name: 'REPO', defaultValue: 'welcome', description: '')
+		}
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                bat "echo Build Stage"		
+            }
+        }
+		stage('Deploy') { 
+            steps {
+                bat '''
+				echo Deploy Stage
+				echo To Deploy
+				'''
+            }
+        }
+    }
+}
