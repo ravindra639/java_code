@@ -6,14 +6,17 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                bat "echo Build Stage"		
+                bat '''
+				echo Build Stage
+				mvn clean compile
+				'''
             }
         }
 		stage('Deploy') { 
             steps {
                 bat '''
 				echo Deploy Stage
-				echo To Deploy
+				mvn clean install
 				'''
             }
         }
